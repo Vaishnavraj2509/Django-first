@@ -6,6 +6,9 @@ def index(request):
      return render(request, 'index.html')
     # return HttpResponse("title is home page")
 
+def home(request):
+     return HttpResponse("title is home page")
+
 def about(request):
     return HttpResponse("title is about page")
 
