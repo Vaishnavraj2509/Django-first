@@ -22,7 +22,9 @@ admin.site.site_title = "Your icecream parlour Admin Portal"
 admin.site.index_title = "Welcome to ice cream parlour"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-        path('', include('myapp.urls'))
-
+    # Custom admin namespace
+    path('admin/', admin.site.urls, name='admin'),
+    
+    # Include app URLs
+    path('', include('myapp.urls'))
 ]
